@@ -14,3 +14,6 @@ group :development do
 end
 
 gem "octokit"
+gem "httparty"
+gem "configatron" 
+gem "colorize" 
