@@ -7,29 +7,36 @@ module BasicoOctokit
       "closed" => :close
     }.each do | key, value|
       define_singleton_method key do | owner_repo|
-        self.get owner_repo, value
+        self.build owner_repo, value
       end
     end
 
     private
 
+    def self.build(owner_repo,state)
+      issues = self.get owner_repo, state
+      self.injection issues
+    end
+
     def self.get(owner_repo,state)
       self.client.auto_paginate  = true
       issues = self.client.issues owner_repo, :state => state
       self.client.auto_paginate = false
-      self.injection(issues)
+      issues
     end
 
     def self.injection(issues)
-      issues.inject([]) do |arr, issue|
+      arr = []
+      issues.map { | issue |
         myissue = BasicoOctokit::Models::Ticket.new(issue)
         myissue.ticket_user = BasicoOctokit::Models::TicketUser.new(issue.user)
         issue.labels.each do |label|
-          myissue.ticket_labels << BasicoOctokit::Models::TicketLabel.new(label)
+          ticket_label = BasicoOctokit::Models::TicketLabel.new(label)
+          myissue.ticket_labels << ticket_label
         end
         arr << myissue
-        arr
-      end
+      }
+      arr
     end
 
   end

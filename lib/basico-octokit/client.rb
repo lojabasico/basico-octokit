@@ -12,7 +12,7 @@ module BasicoOctokit
       self.client.access_token = access_token
       self.client
     end
-    
+
   end
 
 end
