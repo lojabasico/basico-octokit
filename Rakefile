@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "basico-octakit"
-  gem.homepage = "http://github.com/rickybell/basico-octakit"
+  gem.homepage = "http://github.com/lojabasico/basico-octokit"
   gem.license = "MIT"
   gem.summary = %Q{Github SDK built on top of Octakit}
   gem.description = %Q{A cool Github SDK}
