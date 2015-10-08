@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "basico-octakit"
   gem.homepage = "http://github.com/rickybell/basico-octakit"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "henrique.belloube@gmail.com"
-  gem.authors = ["rickybell"]
+  gem.summary = %Q{Github SDK built on top of Octakit}
+  gem.description = %Q{A cool Github SDK}
+  gem.email = "henrique.belloube@gmail.com, renatodex@gmail.com"
+  gem.authors = ["rickybell","renatodex"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
