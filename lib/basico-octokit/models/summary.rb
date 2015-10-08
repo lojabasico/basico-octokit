@@ -8,8 +8,8 @@ module BasicoOctokit
       attribute :total,             Float
       attribute :state,             String
       attribute :repository,        String
-      attribute :summary_labels,    Array['BasicoOctokit::Models::SummaryLabel']
-      attribute :summary_users,     Array['BasicoOctokit::Models::SummaryUser']
+      attribute :summary_labels,    Array[BasicoOctokit::Models::SummaryLabel]
+      attribute :summary_users,     Array[BasicoOctokit::Models::SummaryUser]
 
     end
   end

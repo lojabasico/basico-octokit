@@ -11,6 +11,9 @@ group :development do
   gem "bundler", "~> 1.0"
   gem "jeweler", "~> 2.0.1"
   gem "simplecov", ">= 0"
+  gem "factory_girl"
+  gem "pry"
+  gem "ffaker"
 end
 
 gem "octokit"
@@ -19,4 +22,3 @@ gem "configatron"
 gem "colorize"
 gem "virtus"
 gem "inflecto"
-gem "factory_girl"
