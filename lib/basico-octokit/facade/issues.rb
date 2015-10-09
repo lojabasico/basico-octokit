@@ -21,7 +21,8 @@ module BasicoOctokit
 
       def self.get(owner_repo,state)
         self.client.auto_paginate  = true
-        issues = self.client.issues owner_repo, :state => state
+        #issues = self.client.issues owner_repo, :state => state
+        issues = self.request_with_log :issues, owner_repo, :state => state
         self.client.auto_paginate = false
         issues
       end

@@ -123,6 +123,7 @@ DEPENDENCIES
   httparty
   inflecto
   jeweler (~> 2.0.1)
+  json
   octokit
   pry
   rdoc (~> 3.12)

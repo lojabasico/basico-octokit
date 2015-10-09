@@ -9,6 +9,7 @@ require 'inflecto'
 require 'factory_girl'
 require 'date'
 require 'pry'
+require 'json'
 
 require 'basico-octokit/initializers/exceptions'
 require 'basico-octokit/config/default'
