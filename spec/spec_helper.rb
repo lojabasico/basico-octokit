@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.setup
 require 'simplecov'
+require 'factory_girl'
 class FakeClient
 
   attr_accessor :auto_paginate
